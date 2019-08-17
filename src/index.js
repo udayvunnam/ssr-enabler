@@ -1,9 +1,10 @@
 const express = require("express");
+import render from "./helpers/renderer";
 
 const app = express();
 
 app.use("*", (req, res) => {
-  res.send("Hello World");
+  res.send(render());
 });
 
 app.listen(3000, () => {
