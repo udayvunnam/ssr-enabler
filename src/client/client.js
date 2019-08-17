@@ -1,10 +1,5 @@
-// import React, { Component } from "react";
-// import ReactDOM from "react-dom";
+import React from "react";
+import ReactDOM from "react-dom";
+import Home from "./components/Home";
 
-// export class Home extends Component {
-//   render() {
-//     return <h1>Serving JSX</h1>;
-//   }
-// }
-
-// ReactDOM.render()
+ReactDOM.render(<Home />, document.getElementById("root"));
