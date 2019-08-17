@@ -1,4 +1,4 @@
-const express = require("express");
+import express from "express";
 import render from "./helpers/renderer";
 
 const app = express();
