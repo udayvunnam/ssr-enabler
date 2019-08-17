@@ -3,6 +3,7 @@ import render from "./helpers/renderer";
 
 const app = express();
 
+app.use(express.static("public"));
 app.use("*", (req, res) => {
   res.send(render());
 });
