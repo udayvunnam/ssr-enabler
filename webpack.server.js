@@ -1,27 +1,16 @@
-const webpack = require("webpack");
 const path = require("path");
+const merge = require("webpack-merge");
 const webpackNodeExternals = require("webpack-node-externals");
+const baseConfig = require("./webpack.base");
 
-module.exports = {
+const serverConfig = {
   target: "node",
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js"
   },
-  module: {
-    rules: [
-      {
-        test: /\.js?$/,
-        loader: "babel-loader",
-        exclude: "/node_modules/"
-      }
-    ]
-  },
-  plugins: [
-    new webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify("development")
-    })
-  ],
   externals: [webpackNodeExternals()]
 };
+
+module.exports = merge(baseConfig, serverConfig);
