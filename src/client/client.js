@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Routes from "./routes";
-import { BrowserRouter } from "react-router-dom";
+import { renderRoutes } from "react-router-config";
+import { BrowserRouter, matchRoutes } from "react-router-dom";
+import Routes from "./Routes";
 
 ReactDOM.hydrate(
   <BrowserRouter>
     <Routes />
   </BrowserRouter>,
-  document.getElementById("root")
+  document.querySelector("#root")
 );
