@@ -1,0 +1,6 @@
+# Ignore built files except build/index.js
+build/
+public/
+webpack.base.js
+webpack.client.js
+webpack.server.js

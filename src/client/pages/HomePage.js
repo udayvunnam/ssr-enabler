@@ -1,12 +1,10 @@
-import React from "react";
+import React from 'react';
 
-const Home = () => {
-  return (
-    <div className="home">
-      <h1>I am Home</h1>
-      <button onClick={() => console.log("clicked")}>Click Me</button>
-    </div>
-  );
-};
+const Home = () => (
+  <div className="center-align" style={{ marginTop: '200px' }}>
+    <h3>Welcome</h3>
+    <p>Check out these awesome features</p>
+  </div>
+);
 
 export default { component: Home };
