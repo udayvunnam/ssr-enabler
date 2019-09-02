@@ -37,6 +37,13 @@ app.get('*', (req, res) => {
   Promise.all(promises).then(() => {
     const context = {};
     const content = renderer(req, store, context);
+    // context obj in case of redirect
+    // { action: 'REPLACE',
+    // location: { pathname: '/', search: '', hash: '', state: undefined },
+    // url: '/' }
+    if (context.url) {
+      res.redirect(302, context.url);
+    }
     if (context.notFound) {
       res.status(404);
     }
