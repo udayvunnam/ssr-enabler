@@ -23,6 +23,7 @@
     "react/prop-types": 0,
     "no-console": 0,
     "react/destructuring-assignment": 0,
-    "arrow-body-style": 0
+    "arrow-body-style": 0,
+    "comma-dangle": 0
   }
 }
