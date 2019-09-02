@@ -7,7 +7,6 @@ import serialize from 'serialize-javascript';
 import Routes from '../client/Routes';
 
 export default (req, store) => {
-  console.log(req.url);
 
   const content = renderToString(
     <Provider store={store}>
