@@ -8,7 +8,7 @@ import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import axios from 'axios';
 import reducers from './reducers';
-import Routes from './Routes';
+import Routes from './routes';
 
 const axiosInstance = axios.create({
   baseURL: '/api',

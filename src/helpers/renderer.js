@@ -5,7 +5,7 @@ import { renderRoutes } from 'react-router-config';
 import { StaticRouter } from 'react-router-dom';
 import serialize from 'serialize-javascript';
 import { Helmet } from 'react-helmet';
-import Routes from '../client/Routes';
+import Routes from '../client/routes';
 
 export default (req, store, context) => {
   const content = renderToString(
